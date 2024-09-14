@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse HTMO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+        .search-bar button {
+            background-color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .language-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .language {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .language i {
+            font-size: 40px;
+            color: #333;
+        }
+        .language h3 {
+            margin: 10px 0;
+        }
+        .language a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .language a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .resource-card, .topic-card, .language-grid .language {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .resource-card a, .topic-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .resource-card a:hover, .topic-card a:hover {
+            text-decoration: underline;
+        }
+        .subscribe input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 110px);
+            margin-right: 10px;
+        }
+        .subscribe button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .subscribe button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Eclipse HTMO</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="tools.html" class="button">Tools</a></li>
+                    <li><a href="tutorials.html">Tutorials</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="podcasts.html">Podcasts</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <!-- Add more options here -->
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for resources...">
+                <button onclick="performSearch()"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h2>Welcome to Eclipse HTMO</h2>
+                <p>Your daily source for developer news and resources.</p>
+                <a href="#resources" class="cta-button">Explore Resources</a>
+            </div>
+        </section>
+        <section id="resources">
+            <div class="container">
+                <h2>Latest Resources</h2>
+                <div class="resource-card">
+                    <h3>JavaScript Tips</h3>
+                    <p>Enhance your JavaScript skills with these tips and tricks.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="resource-card">
+                    <h3>CSS Techniques</h3>
+                    <p>Learn the latest CSS techniques to improve your web designs.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="resource-card">
+                    <h3>React Best Practices</h3>
+                    <p>Discover best practices for building React applications.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section id="programming-languages">
+            <div class="container">
+                <h2>Popular Programming Languages</h2>
+                <div class="language-grid">
+                    <div class="language" data-tooltip="Python is a versatile language used in web development, data science, automation, and more.">
+                        <i class="fab fa-python"></i>
+                        <h3><a href="https://www.python.org" target="_blank">Python</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Java is widely used in enterprise environments, known for its portability and scalability.">
+                        <i class="fab fa-java"></i>
+                        <h3><a href="https://www.java.com" target="_blank">Java</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="JavaScript is essential for interactive web development, powering dynamic websites and applications.">
+                        <i class="fab fa-js"></i>
+                        <h3><a href="https://www.javascript.com" target="_blank">JavaScript</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="PHP is a server-side language used for web development, known for its integration with databases.">
+                        <i class="fab fa-php"></i>
+                        <h3><a href="https://www.php.net" target="_blank">PHP</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Ruby is known for its elegant syntax and is commonly used with the Ruby on Rails framework for web development.">
+                        <i class="fab fa-ruby"></i>
+                        <h3><a href="https://www.ruby-lang.org" target="_blank">Ruby</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Rust focuses on safety and performance, suitable for system-level programming and concurrent applications.">
+                        <i class="fas fa-cogs"></i>
+                        <h3><a href="https://www.rust-lang.org" target="_blank">Rust</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Swift is designed by Apple for iOS and macOS development, emphasizing performance and safety.">
+                        <i class="fab fa-swift"></i>
+                        <h3><a href="https://www.swift.org" target="_blank">Swift</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="C++ extends C with object-oriented features, used for high-performance applications and game development.">
+                        <i class="fas fa-code"></i>
+                        <h3><a href="https://www.cplusplus.com" target="_blank">C++</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Go, or Golang, is known for its simplicity and efficiency, often used in cloud services and scalable applications.">
+                        <i class="fab fa-go"></i>
+                        <h3><a href="https://golang.org" target="_blank">Go</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="TypeScript adds static types to JavaScript, improving code quality and maintainability for large-scale applications.">
+                        <i class="fab fa-js"></i>
+                        <h3><a href="https://www.typescriptlang.org" target="_blank">TypeScript</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Perl is known for its text-processing capabilities and is used for web development and system administration.">
+                        <i class="fab fa-perl"></i>
+                        <h3><a href="https://www.perl.org" target="_blank">Perl</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="SQL is used for managing and querying relational databases.">
+                        <i class="fas fa-database"></i>
+                        <h3><a href="https://www.sql.org" target="_blank">SQL</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Scala combines object-oriented and functional programming, often used in big data applications.">
+                        <i class="fas fa-code-branch"></i>
+                        <h3><a href="https://www.scala-lang.org" target="_blank">Scala</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Kotlin is a modern language that runs on the Java Virtual Machine (JVM), and is used for Android development.">
+                        <i class="fab fa-kotlin"></i>
+                        <h3><a href="https://kotlinlang.org" target="_blank">Kotlin</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Haskell is a purely functional programming language with strong static typing and lazy evaluation.">
+                        <i class="fas fa-square-root-alt"></i>
+                        <h3><a href="https://www.haskell.org" target="_blank">Haskell</a></h3>
+                    </div>
+                    <div class="language" data-tooltip="Dart is used primarily for building web and mobile apps, notably with the Flutter framework.">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3><a href="https://dart.dev" target="_blank">Dart</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tools">
+            <div class="container">
+                <h2>Developer Tools</h2>
+                <p>Explore various tools that can enhance your development workflow.</p>
+                <ul>
+                    <li><a href="https://www.visualstudio.com" class="button">Visual Studio Code</a></li>
+                    <li><a href="https://www.jetbrains.com/idea/" class="button">IntelliJ IDEA</a></li>
+                    <li><a href="https://github.com/" class="button">GitHub</a></li>
+                    <li><a href="https://git-scm.com/" class="button">Git</a></li>
+                    <li><a href="https://www.docker.com/" class="button">Docker</a></li>
+                    <!-- Add more tools here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Eclipse HTMO. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="tools.html">Tools</a>
+                <!-- Add other footer links here -->
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

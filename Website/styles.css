@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+    background-color: #fff;
+    color: #333;
+}
+
+header .search-bar button {
+    background-color: #000;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .search-bar button:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Trending Topics */
+#trending-topics {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.topic-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topic-card h3 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.topic-card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Resources */
+#resources {
+    padding: 40px 20px;
+}
+
+.resource-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resource-card a.read-more {
+    color: #000;
+    text-decoration: none;
+}
+
+.resource-card a.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Programming Languages */
+#programming-languages {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.language-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.language {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.language i {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.language h3 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.language h3 a:hover {
+    text-decoration: underline;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.language[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* Subscription and Contact Forms */
+#subscribe, #contact {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+#subscribe form, #contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#subscribe input, #contact input, #contact textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+#subscribe button, #contact button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#subscribe button:hover, #contact button:hover {
+    background-color: #333;
+}
+
+#contact textarea {
+    height: 150px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
